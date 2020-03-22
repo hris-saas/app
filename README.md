@@ -16,3 +16,14 @@ HR Services uses Homestead for local development envinronment. Kindly install Ho
 Depending on the Homestead.yaml file you copied/modified, you can see which url can be accessed in your browser. Just remember, that whatever url and ip address you've decided to use, you also need to add those entries to your hosts file.
 
 When you're up and running, you can do `vagrant up` and `vagrant ssh` to log in to homestead. There's a `./scripts/fresh.sh` shell script that you can run to run the initial setup.
+
+When cloning all the related repositories, the file structure should look as follows:
+
+.
+└── hr-services
+    ├── app
+    ├── ats
+    ├── auth
+    ├── core
+    ├── pim
+    └── ui
