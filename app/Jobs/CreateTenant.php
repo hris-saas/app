@@ -2,8 +2,8 @@
 
 namespace App\Jobs;
 
-use App\User;
 use Exception;
+use HRis\Auth\Eloquent\User;
 use Illuminate\Bus\Queueable;
 use Hyn\Tenancy\Models\Website;
 use Hyn\Tenancy\Models\Hostname;
