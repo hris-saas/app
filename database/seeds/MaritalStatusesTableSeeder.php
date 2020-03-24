@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use HRServices\PIM\Eloquent\MaritalStatus;
+use HRis\PIM\Eloquent\MaritalStatus;
 
 class MaritalStatusesTableSeeder extends Seeder
 {

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use HRServices\PIM\Eloquent\TerminationReason;
+use HRis\PIM\Eloquent\TerminationReason;
 
 class TerminationReasonsTableSeeder extends Seeder
 {

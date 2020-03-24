@@ -4,33 +4,33 @@ cpus: 2
 provider: virtualbox
 authorize: ~/.ssh/keys/personal/id_rsa.pub
 keys:
-    - ~/.ssh/keys/personal/id_rsa
+  - ~/.ssh/keys/personal/id_rsa
 folders:
-    - map: /Users/b8/Sites/personal/hr-services/app
-      to: /home/vagrant/app
-    - map: /Users/b8/Sites/personal/hr-services/ats
-      to: /home/vagrant/ats
-    - map: /Users/b8/Sites/personal/hr-services/auth
-      to: /home/vagrant/auth
-    - map: /Users/b8/Sites/personal/hr-services/core
-      to: /home/vagrant/core
-    - map: /Users/b8/Sites/personal/hr-services/pim
-      to: /home/vagrant/pim
-    - map: /Users/b8/Sites/personal/hr-services/ui
-      to: /home/vagrant/ui
+  - map: /Users/b8/Sites/personal/hris-saas/app
+    to: /home/vagrant/app
+  - map: /Users/b8/Sites/personal/hris-saas/ats
+    to: /home/vagrant/ats
+  - map: /Users/b8/Sites/personal/hris-saas/auth
+    to: /home/vagrant/auth
+  - map: /Users/b8/Sites/personal/hris-saas/core
+    to: /home/vagrant/core
+  - map: /Users/b8/Sites/personal/hris-saas/pim
+    to: /home/vagrant/pim
+  - map: /Users/b8/Sites/personal/hris-saas/ui
+    to: /home/vagrant/ui
 sites:
-    - map: hr-services.local
-      to: /home/vagrant/app/public
-    - map: tenant1.hr-services.local
-      to: /home/vagrant/app/public
-    - map: tenant2.hr-services.local
-      to: /home/vagrant/app/public
+  - map: hris-saas.local
+    to: /home/vagrant/app/public
+  - map: tenant1.hris-saas.local
+    to: /home/vagrant/app/public
+  - map: tenant2.hris-saas.local
+    to: /home/vagrant/app/public
 databases:
-    - hr-services
+  - hris-saas
 features:
-    - mariadb: false
-    - ohmyzsh: true
-    - webdriver: false
-    - minio: true
-name: hr-services
-hostname: hr-services
+  - mariadb: false
+  - ohmyzsh: true
+  - webdriver: false
+  - minio: true
+name: hris-saas
+hostname: hris-saas

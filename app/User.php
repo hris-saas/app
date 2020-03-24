@@ -5,7 +5,7 @@ namespace App;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use HRServices\Auth\Notifications\ResetPassword as ResetPasswordNotification;
+use HRis\Auth\Notifications\ResetPassword as ResetPasswordNotification;
 
 class User extends Authenticatable
 {

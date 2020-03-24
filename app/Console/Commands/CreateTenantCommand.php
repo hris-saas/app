@@ -36,7 +36,7 @@ class CreateTenantCommand extends Command
             'domain'                => $domain,
             'first_name'            => ucfirst($tenant),
             'last_name'             => 'Admin',
-            'email'                 => "{$tenant}@hr-services.com",
+            'email'                 => "{$tenant}@hris-saas.com",
             'password'              => bcrypt('password'),
             'password_confirmation' => bcrypt('password'),
             'name'                  => ucfirst($tenant),

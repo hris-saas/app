@@ -30,12 +30,11 @@
         }
     ],
     "require": {
-        "hr-services/ats": "*",
-        "hr-services/auth": "*",
-        "hr-services/core": "*",
-        "hr-services/pim": "*",
-        "hr-services/ui": "*",
-        "hyn/multi-tenant": "^5.6"
+        "hris-saas/ats": "*",
+        "hris-saas/auth": "*",
+        "hris-saas/core": "*",
+        "hris-saas/pim": "*",
+        "hris-saas/ui": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

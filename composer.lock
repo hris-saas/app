@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "89eabf3bf628aa88b701620bcff5d75f",
+    "content-hash": "6d23113823bbfca615a59c2ad651e415",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1003,30 +1003,30 @@
             "time": "2019-07-01T23:21:34+00:00"
         },
         {
-            "name": "hr-services/ats",
-            "version": "dev-master",
+            "name": "hris-saas/ats",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../ats",
-                "reference": "5bf1b912d8e3f05006302e9e8f7c7d9925509dfb"
+                "reference": "c554d6f52d85e94ac5ef348e07bc14e9037cf6af"
             },
             "require": {
-                "hr-services/auth": "dev-master",
-                "hr-services/core": "dev-master",
-                "hr-services/pim": "dev-master"
+                "hris-saas/auth": "*",
+                "hris-saas/core": "*",
+                "hris-saas/pim": "*"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "HRServices\\ATS\\Providers\\ATSServiceProvider",
-                        "HRServices\\ATS\\Providers\\RouteServiceProvider"
+                        "HRis\\ATS\\Providers\\ATSServiceProvider",
+                        "HRis\\ATS\\Providers\\RouteServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "HRServices\\ATS\\": "src"
+                    "HRis\\ATS\\": "src"
                 }
             },
             "license": [
@@ -1039,27 +1039,27 @@
                     "role": "Creator & Designer"
                 }
             ],
-            "description": "HR Services ATS Package.",
+            "description": "HRis SaaS ATS Package.",
             "keywords": [
                 "ats",
-                "hr-services",
+                "hris-saas",
                 "package"
             ],
             "support": {
-                "issues": "https://gitlab.com/hr-services/ats/issues",
-                "source": "https://gitlab.com/hr-services/ats"
+                "issues": "https://gitlab.com/hris-saas/bugs/issues",
+                "source": "https://gitlab.com/hris-saas/ats"
             }
         },
         {
-            "name": "hr-services/auth",
-            "version": "dev-master",
+            "name": "hris-saas/auth",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../auth",
-                "reference": "76fcc734a1371c7b5d992b4721acf911a3dde569"
+                "reference": "e09a7b281df2ca4fe8fd855730ffff1f663b6244"
             },
             "require": {
-                "hr-services/core": "dev-master",
+                "hris-saas/core": "*",
                 "laravel/passport": "^8.4",
                 "laravel/ui": "^2.0"
             },
@@ -1067,14 +1067,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "HRServices\\Auth\\Providers\\AuthServiceProvider",
-                        "HRServices\\Auth\\Providers\\RouteServiceProvider"
+                        "HRis\\Auth\\Providers\\AuthServiceProvider",
+                        "HRis\\Auth\\Providers\\RouteServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "HRServices\\Auth\\": "src"
+                    "HRis\\Auth\\": "src"
                 }
             },
             "license": [
@@ -1087,29 +1087,30 @@
                     "role": "Creator & Designer"
                 }
             ],
-            "description": "HR Services Auth Package.",
+            "description": "HRis SaaS Auth Package.",
             "keywords": [
                 "auth",
-                "hr-services",
+                "hris-saas",
                 "package"
             ],
             "support": {
-                "issues": "https://gitlab.com/hr-services/auth/issues",
-                "source": "https://gitlab.com/hr-services/auth"
+                "issues": "https://gitlab.com/hris-saas/bugs/issues",
+                "source": "https://gitlab.com/hris-saas/auth"
             }
         },
         {
-            "name": "hr-services/core",
-            "version": "dev-master",
+            "name": "hris-saas/core",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../core",
-                "reference": "718a206a31fbd0e6b95b4187874985b2c303b6af"
+                "reference": "f69b7e47308ff545bdd743d479befebb9cc2c7fa"
             },
             "require": {
                 "fideloper/proxy": "^4.2",
                 "fruitcake/laravel-cors": "^1.0",
                 "guzzlehttp/guzzle": "^6.3",
+                "hyn/multi-tenant": "^5.6",
                 "laravel/framework": "^7.0",
                 "laravel/tinker": "^2.0",
                 "php": "^7.2.5"
@@ -1118,14 +1119,14 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "HRServices\\Core\\Providers\\CoreServiceProvider",
-                        "HRServices\\Core\\Providers\\RouteServiceProvider"
+                        "HRis\\Core\\Providers\\CoreServiceProvider",
+                        "HRis\\Core\\Providers\\RouteServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "HRServices\\Core\\": "src"
+                    "HRis\\Core\\": "src"
                 }
             },
             "license": [
@@ -1138,41 +1139,41 @@
                     "role": "Creator & Designer"
                 }
             ],
-            "description": "HR Services Auth Package.",
+            "description": "HRis SaaS Auth Package.",
             "keywords": [
                 "core",
-                "hr-services",
+                "hris-saas",
                 "package"
             ],
             "support": {
-                "issues": "https://gitlab.com/hr-services/core/issues",
-                "source": "https://gitlab.com/hr-services/core"
+                "issues": "https://gitlab.com/hris-saas/bugs/issues",
+                "source": "https://gitlab.com/hris-saas/core"
             }
         },
         {
-            "name": "hr-services/pim",
-            "version": "dev-master",
+            "name": "hris-saas/pim",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../pim",
-                "reference": "66c8c673747d97fcb089130e7774709f36afc724"
+                "reference": "f61c483330a67b253cdb06bede90ff22b7fbe3aa"
             },
             "require": {
-                "hr-services/auth": "dev-master",
-                "hr-services/core": "dev-master"
+                "hris-saas/auth": "*",
+                "hris-saas/core": "*"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "HRServices\\PIM\\Providers\\PIMServiceProvider",
-                        "HRServices\\PIM\\Providers\\RouteServiceProvider"
+                        "HRis\\PIM\\Providers\\PIMServiceProvider",
+                        "HRis\\PIM\\Providers\\RouteServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "HRServices\\PIM\\": "src"
+                    "HRis\\PIM\\": "src"
                 }
             },
             "license": [
@@ -1185,41 +1186,41 @@
                     "role": "Creator & Designer"
                 }
             ],
-            "description": "HR Services PIM Package.",
+            "description": "HRis SaaS PIM Package.",
             "keywords": [
-                "hr-services",
+                "hris-saas",
                 "package",
                 "pim"
             ],
             "support": {
-                "issues": "https://gitlab.com/hr-services/pim/issues",
-                "source": "https://gitlab.com/hr-services/pim"
+                "issues": "https://gitlab.com/hris-saas/bugs/issues",
+                "source": "https://gitlab.com/hris-saas/pim"
             }
         },
         {
-            "name": "hr-services/ui",
-            "version": "dev-master",
+            "name": "hris-saas/ui",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "../ui",
-                "reference": "d45f9eb5f1717d508e6e8ed2a129522380239e06"
+                "reference": "621b137fcf97dabc1d724cf5a03de2a1a9f808a5"
             },
             "require": {
-                "hr-services/core": "dev-master",
+                "hris-saas/core": "*",
                 "intervention/image": "^2.5"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "HRServices\\UI\\Providers\\UIServiceProvider",
-                        "HRServices\\UI\\Providers\\RouteServiceProvider"
+                        "HRis\\UI\\Providers\\UIServiceProvider",
+                        "HRis\\UI\\Providers\\RouteServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "HRServices\\UI\\": "src"
+                    "HRis\\UI\\": "src"
                 }
             },
             "license": [
@@ -1232,15 +1233,15 @@
                     "role": "Creator & Designer"
                 }
             ],
-            "description": "HR Services UI Package.",
+            "description": "HRis SaaS UI Package.",
             "keywords": [
-                "hr-services",
+                "hris-saas",
                 "package",
                 "ui"
             ],
             "support": {
-                "issues": "https://gitlab.com/hr-services/ui/issues",
-                "source": "https://gitlab.com/hr-services/ui"
+                "issues": "https://gitlab.com/hris-saas/bugs/issues",
+                "source": "https://gitlab.com/hris-saas/ui"
             }
         },
         {
@@ -2765,16 +2766,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.25",
+            "version": "2.0.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "c18159618ed7cd7ff721ac1a8fec7860a475d2f0"
+                "reference": "09655fcc1f8bab65727be036b28f6f20311c126c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c18159618ed7cd7ff721ac1a8fec7860a475d2f0",
-                "reference": "c18159618ed7cd7ff721ac1a8fec7860a475d2f0",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/09655fcc1f8bab65727be036b28f6f20311c126c",
+                "reference": "09655fcc1f8bab65727be036b28f6f20311c126c",
                 "shasum": ""
             },
             "require": {
@@ -2853,7 +2854,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2020-02-25T04:16:50+00:00"
+            "time": "2020-03-13T04:15:39+00:00"
         },
         {
             "name": "psr/container",

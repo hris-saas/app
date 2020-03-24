@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use HRis\PIM\Eloquent\Department;
 use Illuminate\Support\Facades\DB;
-use HRServices\PIM\Eloquent\Department;
 
 class DepartmentsTableSeeder extends Seeder
 {

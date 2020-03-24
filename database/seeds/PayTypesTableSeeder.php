@@ -1,8 +1,8 @@
 <?php
 
+use HRis\PIM\Eloquent\PayType;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use HRServices\PIM\Eloquent\PayType;
 
 class PayTypesTableSeeder extends Seeder
 {

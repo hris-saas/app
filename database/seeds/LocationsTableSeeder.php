@@ -1,8 +1,8 @@
 <?php
 
+use HRis\PIM\Eloquent\Location;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use HRServices\PIM\Eloquent\Location;
 
 class LocationsTableSeeder extends Seeder
 {

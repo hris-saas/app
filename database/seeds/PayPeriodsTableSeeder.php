@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use HRis\PIM\Eloquent\Department;
 use Illuminate\Support\Facades\DB;
-use HRServices\PIM\Eloquent\PayPeriod;
 
-class PayPeriodsTableSeeder extends Seeder
+class DepartmentsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,14 +13,12 @@ class PayPeriodsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('employee_fields')->where('class', PayPeriod::class)->delete();
+        DB::table('employee_fields')->where('class', Department::class)->delete();
 
-        DB::table('employee_fields')->insert(
-            [
-                ['class' => PayPeriod::class, 'name' => 'Twice a month', 'sort_order' => 1, 'created_at' => now(), 'updated_at' => now()],
-                ['class' => PayPeriod::class, 'name' => 'Monthly', 'sort_order' => 2, 'created_at' => now(), 'updated_at' => now()],
-                ['class' => PayPeriod::class, 'name' => 'Weekly', 'sort_order' => 3, 'created_at' => now(), 'updated_at' => now()],
-            ]
-        );
+        DB::table('employee_fields')->insert([
+            ['class' => Department::class, 'name' => 'Creative', 'sort_order' => 1, 'created_at' => now(), 'updated_at' => now()],
+            ['class' => Department::class, 'name' => 'Engineering', 'sort_order' => 2, 'created_at' => now(), 'updated_at' => now()],
+            ['class' => Department::class, 'name' => 'Operation', 'sort_order' => 3, 'created_at' => now(), 'updated_at' => now()],
+        ]);
     }
 }

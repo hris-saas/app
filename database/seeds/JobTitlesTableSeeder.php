@@ -1,8 +1,8 @@
 <?php
 
+use HRis\PIM\Eloquent\JobTitle;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use HRServices\PIM\Eloquent\JobTitle;
 
 class JobTitlesTableSeeder extends Seeder
 {

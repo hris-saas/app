@@ -1,8 +1,8 @@
 <?php
 
+use HRis\PIM\Eloquent\Division;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use HRServices\PIM\Eloquent\Division;
 
 class DivisionsTableSeeder extends Seeder
 {

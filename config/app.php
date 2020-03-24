@@ -54,7 +54,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'domain' => env('APP_DOMAIN', 'hr-services.local'),
+    'domain' => env('APP_DOMAIN', 'hris-saas.local'),
 
     'asset_url' => env('ASSET_URL', null),
 

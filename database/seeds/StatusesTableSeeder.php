@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use HRServices\ATS\Eloquent\Step;
+use HRis\ATS\Eloquent\Step;
 use Illuminate\Support\Facades\DB;
 
 class StatusesTableSeeder extends Seeder
