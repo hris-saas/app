@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use Hyn\Tenancy\Environment;
-use Laravel\Passport\Passport;
+use App\Tenant;
 use Illuminate\Support\ServiceProvider;
+use Tenancy\Identification\Contracts\ResolvesTenants;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,7 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        Passport::ignoreMigrations();
+        $this->app->resolving(ResolvesTenants::class, function (ResolvesTenants $resolver) {
+            $resolver->addModel(Tenant::class);
+            
+            return $resolver;
+        });
     }
 
     /**
@@ -25,14 +29,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $env = app(Environment::class);
-
-        if ($fqdn = optional($env->hostname())->fqdn) {
-            config([
-                'database.default'             => 'tenant',
-                // 'permission.models.role'       => \App\Models\Tenant\Role::class,
-                // 'permission.models.permission' => \App\Models\Tenant\Permission::class,
-            ]);
-        }
+        //
     }
 }

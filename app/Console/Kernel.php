@@ -13,9 +13,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \App\Console\Passport\InstallCommand::class,
-        \App\Console\Passport\ClientCommand::class,
-        \App\Console\Commands\CreateTenantCommand::class,
+        // \App\Console\Passport\InstallCommand::class,
+        // \App\Console\Passport\ClientCommand::class,
+        // \App\Console\Commands\CreateTenantCommand::class,
     ];
 
     /**
