@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Tenant;
+use HRis\Core\Eloquent\Tenant;
 use Illuminate\Support\ServiceProvider;
 use Tenancy\Identification\Contracts\ResolvesTenants;
 
@@ -20,6 +20,9 @@ class AppServiceProvider extends ServiceProvider
             
             return $resolver;
         });
+
+        $this->app->register(\Tenancy\Database\Drivers\Mysql\Provider::class);
+        $this->app->register(\Tenancy\Hooks\Database\Provider::class);
     }
 
     /**

@@ -3,10 +3,11 @@
 namespace App\Jobs;
 
 use Exception;
+use Ramsey\Uuid\Uuid;
 use HRis\Auth\Eloquent\User;
 use Illuminate\Bus\Queueable;
+use HRis\Core\Eloquent\Tenant;
 use Hyn\Tenancy\Models\Website;
-use Hyn\Tenancy\Models\Hostname;
 use Illuminate\Support\Facades\DB;
 use Hyn\Tenancy\Database\Connection;
 use Illuminate\Queue\SerializesModels;
@@ -14,8 +15,6 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Hyn\Tenancy\Contracts\Repositories\WebsiteRepository;
-use Hyn\Tenancy\Contracts\Repositories\HostnameRepository;
 
 class CreateTenant implements ShouldQueue
 {
@@ -32,7 +31,7 @@ class CreateTenant implements ShouldQueue
     {
         $this->data = $data;
 
-        $this->tenantConnection = app(Connection::class);
+        // $this->tenantConnection = app(Connection::class);
     }
 
     /**
@@ -42,24 +41,24 @@ class CreateTenant implements ShouldQueue
      */
     public function handle()
     {
-        $this->website = $this->registerTenant();
+        $this->tenant = $this->registerTenant();
 
-        $this->tenantConnection->set($this->website);
+        // $this->tenantConnection->set($this->tenant);
 
         $user = $this->registerAdmin();
 
-        return $this->website;
+        return $this->tenant;
     }
 
     private function registerAdmin()
     {
-        $user = User::on('tenant')->create($this->data);
+        $user = User::create($this->data);
 
-        // Artisan::call('tenancy:db:seed', ['--class' => 'PermissionsTableSeeder', '--website_id' => $this->website->id, '--force' => true]);
-        // Artisan::call('tenancy:db:seed', ['--class' => 'RolesTableSeeder', '--website_id' => $this->website->id, '--force' => true]);
+        // Artisan::call('tenancy:db:seed', ['--class' => 'PermissionsTableSeeder', '--website_id' => $this->tenant->id, '--force' => true]);
+        // Artisan::call('tenancy:db:seed', ['--class' => 'RolesTableSeeder', '--website_id' => $this->tenant->id, '--force' => true]);
 
-        Artisan::call('tenancy:passport:client', ['--personal' => true, '--name' => 'Personal Access Client', '--website_id' => $this->website->id]);
-        Artisan::call('tenancy:passport:client', ['--password' => true, '--name' => 'Password Grant Client', '--website_id' => $this->website->id]);
+        // Artisan::call('tenancy:passport:client', ['--personal' => true, '--name' => 'Personal Access Client', '--website_id' => $this->tenant->id]);
+        // Artisan::call('tenancy:passport:client', ['--password' => true, '--name' => 'Password Grant Client', '--website_id' => $this->tenant->id]);
 
         return $user;
     }
@@ -69,15 +68,15 @@ class CreateTenant implements ShouldQueue
         try {
             DB::beginTransaction();
 
-            $website = new Website;
-            app(WebsiteRepository::class)->create($website);
-            $website->save();
+            $uuid = substr(Uuid::uuid4()->toString(), 0, 16);
+            $uuid = str_replace('-', null, $uuid);
 
-            $hostname = new Hostname;
-            $hostname->fqdn = $this->data['domain'];
+            $data = [
+                'fqdn' => $this->data['domain'],
+                'uuid' => $uuid,
+            ];
 
-            $hostname->website()->associate($website);
-            app(HostnameRepository::class)->attach($hostname, $website);
+            $tenant = Tenant::create($data);
 
             DB::commit();
         } catch (Exception $e) {
@@ -86,6 +85,6 @@ class CreateTenant implements ShouldQueue
             throw $e;
         }
 
-        return $website;
+        return $tenant;
     }
 }
