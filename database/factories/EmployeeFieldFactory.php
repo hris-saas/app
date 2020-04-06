@@ -9,7 +9,9 @@ use HRis\PIM\Eloquent\JobTitle;
 use HRis\PIM\Eloquent\Location;
 use HRis\PIM\Eloquent\PayPeriod;
 use HRis\PIM\Eloquent\Department;
+use HRis\PIM\Eloquent\Relationship;
 use HRis\PIM\Eloquent\MaritalStatus;
+use HRis\PIM\Eloquent\EmploymentStatus;
 use HRis\PIM\Eloquent\TerminationReason;
 
 /*
@@ -66,6 +68,19 @@ $factory->define(PayType::class, function (Faker $faker) {
 });
 
 $factory->define(TerminationReason::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+    ];
+});
+
+$factory->define(EmploymentStatus::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+    ];
+});
+
+
+$factory->define(Relationship::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
     ];

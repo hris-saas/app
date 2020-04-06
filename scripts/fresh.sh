@@ -13,3 +13,4 @@ php artisan tenancy:db:seed --class=PayTypesTableSeeder --website_id=1
 php artisan tenancy:db:seed --class=EmploymentStatusesTableSeeder --website_id=1
 php artisan tenancy:db:seed --class=EmployeesTableSeeder --website_id=1
 php artisan tenancy:db:seed --class=EmployeeEmploymentStatusesTableSeeder --website_id=1
+php artisan tenancy:db:seed --class=RelationshipsTableSeeder --website_id=1
