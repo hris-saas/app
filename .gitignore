@@ -4,10 +4,7 @@
 .vagrant
 /build
 /node_modules
-/public/_nuxt
-/public/hot
-/public/img
-/public/storage
+/public/*
 /storage/*.key
 /vendor
 Homestead.json
