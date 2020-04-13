@@ -27,3 +27,9 @@ When cloning all the related repositories, the file structure should look as fol
     ├── core
     ├── pim
     └── ui
+
+## Publishing UI
+
+On the root of the app directory run the command below.
+
+` php artisan vendor:publish --tag=hris-saas::ui`
