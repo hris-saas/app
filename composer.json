@@ -10,7 +10,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "../core"
+            "url": "../ats"
         },
         {
             "type": "path",
@@ -18,11 +18,11 @@
         },
         {
             "type": "path",
-            "url": "../pim"
+            "url": "../core"
         },
         {
             "type": "path",
-            "url": "../ats"
+            "url": "../pim"
         },
         {
             "type": "path",

@@ -30,6 +30,6 @@ When cloning all the related repositories, the file structure should look as fol
 
 ## Publishing UI
 
-On the root of the app directory run the command below.
+The application comes with a separate user interface. The first party UI uses the Nuxt.js Vue Framework. In order to gain leaverage on it's usage, you need to go in your terminal and navigate to the root of the `app` directory, then run the artisan command below.
 
-` php artisan vendor:publish --tag=hris-saas::ui`
+`php artisan vendor:publish --tag=hris-saas::ui`
