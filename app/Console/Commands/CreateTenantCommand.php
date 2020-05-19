@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Jobs\CreateTenant;
 use Illuminate\Console\Command;
+use HRis\Core\Generators\UuidGenerator;
 
 class CreateTenantCommand extends Command
 {
@@ -33,7 +34,8 @@ class CreateTenantCommand extends Command
         $domain = $tenant . '.' . config('app.domain');
 
         $data = [
-            'domain'                => $domain,
+            'uuid'                  => (new UuidGenerator())->generate(),
+            'fqdn'                  => $domain,
             'first_name'            => ucfirst($tenant),
             'last_name'             => 'Admin',
             'email'                 => "{$tenant}@hris-saas.com",

@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
                 'remember_token'    => null,
                 'created_at'        => now(),
                 'updated_at'        => now(),
-              ],
+            ],
         ]);
     }
 }
