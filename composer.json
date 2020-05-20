@@ -18,6 +18,10 @@
         },
         {
             "type": "path",
+            "url": "../baum"
+        },
+        {
+            "type": "path",
             "url": "../core"
         },
         {
@@ -32,6 +36,7 @@
     "require": {
         "hris-saas/ats": "*",
         "hris-saas/auth": "*",
+        "hris-saas/baum": "*",
         "hris-saas/core": "*",
         "hris-saas/pim": "*",
         "hris-saas/ui": "*"
