@@ -13,14 +13,14 @@ class CreateTenantCommand extends Command
      *
      * @var string
      */
-    protected string $signature = 'tenancy:create-tenant {tenant}';
+    protected $signature = 'tenancy:create-tenant {tenant}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected string $description = 'Create new tenant website.';
+    protected $description = 'Create new tenant website.';
 
     /**
      * Execute the console command.
