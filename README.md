@@ -24,6 +24,7 @@ When cloning all the related repositories, the file structure should look as fol
     ├── app
     ├── ats
     ├── auth
+    ├── baum
     ├── core
     ├── pim
     └── ui
