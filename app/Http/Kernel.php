@@ -53,6 +53,7 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
+        'locale' => \HRis\Auth\Http\Middleware\SetLocale::class,
     ];
 
     /**
