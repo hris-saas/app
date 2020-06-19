@@ -17,7 +17,17 @@ class DivisionsTableSeeder extends Seeder
 
         DB::table('employee_fields')->insert(
             [
-                ['class' => Division::class, 'name' => 'Development', 'sort_order' => 1, 'created_at' => now(), 'updated_at' => now()],
+                [
+                    'class' => Division::class,
+                    'name'  => json_encode([
+                       'en' => 'Development',
+                       'fr' => 'Développement',
+                       'nl' => 'Ontwikkeling'
+                    ]),
+                    'sort_order' => 1,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
             ]
         );
     }

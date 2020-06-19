@@ -17,8 +17,28 @@ class TerminationReasonsTableSeeder extends Seeder
 
         DB::table('employee_fields')->insert(
             [
-                ['class' => TerminationReason::class, 'name' => 'Resigned', 'sort_order' => 1, 'created_at' => now(), 'updated_at' => now()],
-                ['class' => TerminationReason::class, 'name' => 'Retired', 'sort_order' => 2, 'created_at' => now(), 'updated_at' => now()],
+                [
+                    'class' => TerminationReason::class,
+                    'name'  => json_encode([
+                        'en' => 'Resigned',
+                        'fr' => 'Résigné',
+                        'nl' => 'Ontslag genomen'
+                    ]),
+                    'sort_order' => 1,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
+                [
+                    'class' => TerminationReason::class,
+                    'name'  => json_encode([
+                        'en' => 'Retired',
+                        'fr' => 'Retraité',
+                        'nl' => 'Gepensioneerd'
+                    ]),
+                    'sort_order' => 2,
+                    'created_at' => now(),
+                    'updated_at' => now()
+                ],
             ]
         );
     }

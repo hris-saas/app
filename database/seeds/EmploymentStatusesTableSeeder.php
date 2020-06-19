@@ -19,21 +19,33 @@ class EmploymentStatusesTableSeeder extends Seeder
             [
               'sort_order' => 1,
               'class' => EmploymentStatus::class,
-              'name' => 'Probation',
+              'name'  => json_encode([
+                'en' => 'Probation',
+                'fr' => 'La probation',
+                'nl' => 'Proeftijd'
+              ]),
               'created_at' => now(),
               'updated_at' => now(),
             ],
             [
               'sort_order' => 2,
               'class' => EmploymentStatus::class,
-              'name' => 'Regular',
+              'name'  => json_encode([
+                'en' => 'Regular',
+                'fr' => 'Ordinaire',
+                'nl' => 'Regelmatig'
+              ]),
               'created_at' => now(),
               'updated_at' => now(),
             ],
             [
               'sort_order' => 3,
               'class' => EmploymentStatus::class,
-              'name' => 'Homebased',
+              'name'  => json_encode([
+                'en' => 'Homebased',
+                'fr' => 'À domicile',
+                'nl' => 'Vanuit huis'
+              ]),
               'created_at' => now(),
               'updated_at' => now(),
             ],
