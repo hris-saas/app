@@ -2,20 +2,20 @@
 
 namespace App\Listeners;
 
-use UsersTableSeeder;
-use PayTypesTableSeeder;
-use DivisionsTableSeeder;
-use EmployeesTableSeeder;
-use JobTitlesTableSeeder;
-use LocationsTableSeeder;
-use PayPeriodsTableSeeder;
-use DepartmentsTableSeeder;
-use RelationshipsTableSeeder;
-use MaritalStatusesTableSeeder;
-use EmploymentStatusesTableSeeder;
-use TerminationReasonsTableSeeder;
-use EmployeeEmploymentStatusesTableSeeder;
+use Database\Seeders\UsersTableSeeder;
+use Database\Seeders\PayTypesTableSeeder;
+use Database\Seeders\DivisionsTableSeeder;
+use Database\Seeders\EmployeesTableSeeder;
+use Database\Seeders\JobTitlesTableSeeder;
+use Database\Seeders\LocationsTableSeeder;
+use Database\Seeders\PayPeriodsTableSeeder;
+use Database\Seeders\DepartmentsTableSeeder;
+use Database\Seeders\RelationshipsTableSeeder;
+use Database\Seeders\MaritalStatusesTableSeeder;
 use Tenancy\Hooks\Migration\Events\ConfigureSeeds;
+use Database\Seeders\EmploymentStatusesTableSeeder;
+use Database\Seeders\TerminationReasonsTableSeeder;
+use Database\Seeders\EmployeeEmploymentStatusesTableSeeder;
 
 class ConfigureTenantSeeds
 {

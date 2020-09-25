@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use Ramsey\Uuid\Uuid;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;

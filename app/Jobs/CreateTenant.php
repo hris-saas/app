@@ -50,8 +50,8 @@ class CreateTenant implements ShouldQueue
 
         $user = User::create($this->data);
 
-        Artisan::call('passport:client', ['--personal' => true, '--name' => 'Personal Access Client', '--tenant' => $this->tenant->id]);
-        Artisan::call('passport:client', ['--password' => true, '--name' => 'Password Grant Client', '--tenant' => $this->tenant->id]);
+        Artisan::call('passport:client', ['--personal' => true, '--name' => 'Personal Access Client', '--no-interaction' => true, '--tenant' => $this->tenant->id]);
+        Artisan::call('passport:client', ['--password' => true, '--name' => 'Password Grant Client', '--no-interaction' => true, '--tenant' => $this->tenant->id]);
 
         return $user;
     }
