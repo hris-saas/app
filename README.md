@@ -20,14 +20,15 @@ When you're up and running, you can do `vagrant up` and `vagrant ssh` to log in 
 When cloning all the related repositories, the file structure should look as follows:
 
 .
-└── hris-saas
-    ├── app
-    ├── ats
-    ├── auth
-    ├── baum
-    ├── core
-    ├── pim
-    └── ui
+|___ hris-saas
+  |_ app
+  |_ ats
+  |_ auth
+  |_ baum
+  |_ core
+  |_ pim
+  |_ ras
+  |_ ui
 
 ## Publishing UI
 

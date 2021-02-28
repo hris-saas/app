@@ -30,6 +30,10 @@
         },
         {
             "type": "path",
+            "url": "../ras"
+        },
+        {
+            "type": "path",
             "url": "../ui"
         }
     ],
@@ -39,6 +43,7 @@
         "hris-saas/baum": "*",
         "hris-saas/core": "*",
         "hris-saas/pim": "*",
+        "hris-saas/ras": "*",
         "hris-saas/ui": "*"
     },
     "require-dev": {

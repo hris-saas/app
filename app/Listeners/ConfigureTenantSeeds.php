@@ -12,6 +12,7 @@ use Database\Seeders\PayPeriodsTableSeeder;
 use Database\Seeders\DepartmentsTableSeeder;
 use Database\Seeders\RelationshipsTableSeeder;
 use Database\Seeders\MaritalStatusesTableSeeder;
+use Database\Seeders\ApprovalStatusesTableSeeder;
 use Tenancy\Hooks\Migration\Events\ConfigureSeeds;
 use Database\Seeders\EmploymentStatusesTableSeeder;
 use Database\Seeders\TerminationReasonsTableSeeder;
@@ -34,5 +35,7 @@ class ConfigureTenantSeeds
         $event->seed(EmployeesTableSeeder::class);
         $event->seed(EmployeeEmploymentStatusesTableSeeder::class);
         $event->seed(RelationshipsTableSeeder::class);
+
+        $event->seed(ApprovalStatusesTableSeeder::class);
     }
 }
