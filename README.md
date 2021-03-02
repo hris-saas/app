@@ -11,7 +11,7 @@ HRis SaaS is a web application for HR solutions. We believe HR applications must
 
 ## Setup
 
-HRis SaaS uses Homestead for local development envinronment. Kindly install Homestead. There's a supplied `Homstead.yaml.example` file as a guide. In addition to this, there's also an `.env.example` file provided.
+HRis SaaS uses Homestead for local development environment. Kindly install Homestead. There's a supplied `Homstead.yaml.example` file as a guide. In addition to this, there's also an `.env.example` file provided.
 
 Depending on the Homestead.yaml file you copied/modified, you can see which url can be accessed in your browser. Just remember, that whatever url and ip address you've decided to use, you also need to add those entries to your hosts file.
 
@@ -19,6 +19,7 @@ When you're up and running, you can do `vagrant up` and `vagrant ssh` to log in 
 
 When cloning all the related repositories, the file structure should look as follows:
 
+```
 .
 |___ hris-saas
   |_ app
@@ -29,9 +30,10 @@ When cloning all the related repositories, the file structure should look as fol
   |_ pim
   |_ ras
   |_ ui
+```
 
 ## Publishing UI
 
-The application comes with a separate user interface. The first party UI uses the Nuxt.js Vue Framework. In order to gain leaverage on it's usage, you need to go in your terminal and navigate to the root of the `app` directory, then run the artisan command below.
+The application comes with a separate user interface. The first party UI uses the Nuxt.js Vue Framework. In order to gain leverage on its usage, you need to go in your terminal and navigate to the root of the `app` directory, then run the artisan command below.
 
 `php artisan vendor:publish --tag=hris-saas::ui`
