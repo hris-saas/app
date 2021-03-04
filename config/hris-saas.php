@@ -17,7 +17,7 @@ return [
 
         'migrations' => [
 
-            'order' => ['core', 'auth', 'pim', 'ras', 'ats'],
+//            'order' => ['core', 'auth', 'pim', 'ras', 'ats'],
         ],
     ],
 

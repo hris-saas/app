@@ -6,9 +6,11 @@ use HRis\Auth\Eloquent\User;
 use Tenancy\Facades\Tenancy;
 use Illuminate\Bus\Queueable;
 use HRis\Core\Eloquent\Tenant;
+use Spatie\Permission\Models\Role;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Queue\InteractsWithQueue;
+use Spatie\Permission\Models\Permission;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
@@ -49,6 +51,11 @@ class CreateTenant implements ShouldQueue
         Tenancy::setTenant($this->tenant);
 
         $user = User::create($this->data);
+
+        $role = Role::first();
+        $role->givePermissionTo(Permission::all());
+
+        $user->assignRole($role);
 
         Artisan::call('passport:client', ['--personal' => true, '--name' => 'Personal Access Client', '--no-interaction' => true, '--tenant' => $this->tenant->id]);
         Artisan::call('passport:client', ['--password' => true, '--name' => 'Password Grant Client', '--no-interaction' => true, '--tenant' => $this->tenant->id]);
