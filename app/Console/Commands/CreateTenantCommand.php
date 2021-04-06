@@ -24,10 +24,8 @@ class CreateTenantCommand extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return mixed
      */
-    public function handle()
+    public function __invoke(): void
     {
         $tenant = $this->argument('tenant');
 
