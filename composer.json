@@ -7,36 +7,12 @@
         "laravel"
     ],
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../ats"
-        },
-        {
-            "type": "path",
-            "url": "../auth"
-        },
-        {
-            "type": "path",
-            "url": "../baum"
-        },
-        {
-            "type": "path",
-            "url": "../core"
-        },
-        {
-            "type": "path",
-            "url": "../pim"
-        },
-        {
-            "type": "path",
-            "url": "../ras"
-        },
-        {
-            "type": "path",
-            "url": "../ui"
+    "repositories": {
+        "gitlab.com/6899303": {
+            "type": "composer",
+            "url": "https://gitlab.com/api/v4/group/6899303/-/packages/composer/packages.json"
         }
-    ],
+    },
     "require": {
         "hris-saas/ats": "*",
         "hris-saas/auth": "*",
